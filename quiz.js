@@ -1,4 +1,3 @@
-
 const readline = require('readline');
 
 class Quiz {
@@ -52,129 +51,92 @@ class Quiz {
 // Quiz questions
 const questions = [
   {
-    text: "What is the capital of France?",
-    options: ["London", "Paris", "Berlin", "Madrid"],
-    correctIndex: 1
-  },
-  {
-    text: "Which planet is known as the Red Planet?",
-    options: ["Mars", "Jupiter", "Venus", "Mercury"],
-    correctIndex: 0
-  },
-  {
-    text: "What is the largest ocean on Earth?",
-    options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    text: "What is the correct way to declare a variable in Python?",
+    options: ["var x;", "int x;", "let x;", "x = 1;"],
     correctIndex: 3
   },
   {
-    text: "Who is the author of the Harry Potter book series?",
-    options: ["J.R.R. Tolkien", "J.K. Rowling", "George R.R. Martin", "Stephen King"],
-    correctIndex: 1
-  },
-  {
-    text: "Which country is famous for its tulips and windmills?",
-    options: ["Netherlands", "Italy", "Sweden", "Switzerland"],
-    correctIndex: 0
-  },
-  {
-    text: "Who painted the Mona Lisa?",
-    options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Salvador Dali"],
+    text: "Which of the following is a valid Python comment?",
+    options: ["/* This is a comment */", "// This is a comment", "# This is a comment", "<!-- This is a comment -->"],
     correctIndex: 2
   },
   {
-    text: "What is the largest continent on Earth?",
-    options: ["Asia", "Africa", "Europe", "North America"],
+    text: "What is the output of the following Python code?\n\nprint(3 + 2 * 4)",
+    options: ["11", "14", "20", "Error"],
     correctIndex: 0
   },
   {
-    text: "Who invented the telephone?",
-    options: ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Albert Einstein"],
+    text: "Which operator is used for exponentiation in Python?",
+    options: ["**", "//", "++", "^"],
     correctIndex: 0
   },
   {
-    text: "What is the national flower of Japan?",
-    options: ["Cherry blossom", "Rose", "Lotus", "Tulip"],
+    text: "What is the result of the following Python expression?\n\n'Hello' + 'World'",
+    options: ["HelloWorld", "Hello World", "'Hello' + 'World'", "Error"],
     correctIndex: 0
   },
   {
-    text: "Which famous scientist developed the theory of relativity?",
-    options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Marie Curie"],
-    correctIndex: 1
-  },
-  {
-    text: "Which animal is known as the 'King of the Jungle'?",
-    options: ["Lion", "Tiger", "Elephant", "Giraffe"],
-    correctIndex: 0
-  },
-  {
-    text: "Who is the current President of the United States?",
-    options: ["Joe Biden", "Donald Trump", "Barack Obama", "George Washington"],
-    correctIndex: 0
-  },
-  {
-    text: "Which famous scientist discovered the law of gravity?",
-    options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Marie Curie"],
-    correctIndex: 0
-  },
-  {
-    text: "Which city is known as the 'Eternal City'?",
-    options: ["Paris", "Rome", "Athens", "Cairo"],
-    correctIndex: 1
-  },
-  {
-    text: "Who wrote the play 'Romeo and Juliet'?",
-    options: ["William Shakespeare", "Emily Brontë", "Jane Austen", "Mark Twain"],
-    correctIndex: 0
-  },
-  {
-    text: "What is the currency of Japan?",
-    options: ["Yuan", "Rupee", "Yen", "Euro"],
+    text: "How do you define a function in Python?",
+    options: ["define my_function():", "function my_function():", "def my_function():", "my_function():"],
     correctIndex: 2
   },
   {
-    text: "Which country is famous for the Great Wall?",
-    options: ["China", "India", "Brazil", "Russia"],
+    text: "What is the output of the following Python code?\n\nx = ['apple', 'banana', 'cherry']\nprint(len(x))",
+    options: ["2", "3", "4", "Error"],
+    correctIndex: 1
+  },
+  {
+    text: "Which function is used to get user input in Python?",
+    options: ["input()", "get_input()", "user_input()", "readline()"],
     correctIndex: 0
   },
   {
-    text: "Who painted the 'The Starry Night'?",
-    options: ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Salvador Dali"],
-    correctIndex: 0
-  },
-  {
-    text: "What is the tallest mountain in the world?",
-    options: ["Mount Everest", "K2", "Kangchenjunga", "Makalu"],
-    correctIndex: 0
-  },
-  {
-    text: "Who is the author of the book 'To Kill a Mockingbird'?",
-    options: ["Harper Lee", "F. Scott Fitzgerald", "George Orwell", "Charles Dickens"],
-    correctIndex: 0
-  },
-  {
-    text: "What is the largest animal on Earth?",
-    options: ["Elephant", "Giraffe", "Blue whale", "Hippopotamus"],
+    text: "What is the correct way to write a conditional statement in Python?",
+    options: ["if x == 5 {", "if (x == 5)", "if x == 5:", "if {x == 5}"],
     correctIndex: 2
   },
   {
-    text: "Which city is known as the 'Big Apple'?",
-    options: ["New York City", "Los Angeles", "Chicago", "San Francisco"],
+    text: "What is the output of the following Python code?\n\nx = [1, 2, 3]\nprint(x[1])",
+    options: ["1", "2", "3", "Error"],
+    correctIndex: 1
+  },
+  {
+    text: "How do you access the last element of a list in Python?",
+    options: ["list[-1]", "list[last]", "list[last_element]", "list.last()"],
+    correctIndex: 0
+  },
+  
+  {
+    text: "What is the correct way to write a for loop in Python?",
+    options: ["for (i = 0; i < 5; i++)", "for i in range(5):", "for i = 0; i < 5; i++:", "for (i in range(5))"],
+    correctIndex: 1
+  },
+  
+  {
+    text: "How do you convert a string to an integer in Python?",
+    options: ["str()", "int()", "float()", "convert()"],
+    correctIndex: 1
+  },
+  
+  {
+    text: "Which function is used to print text in Python?",
+    options: ["print()", "echo()", "console.log()", "println()"],
     correctIndex: 0
   },
   {
-    text: "Who invented the light bulb?",
-    options: ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Isaac Newton"],
+    text: "What is the correct way to check if a value exists in a list in Python?",
+    options: ["value in list", "list.contains(value)", "list.index(value)", "list.exists(value)"],
     correctIndex: 0
   },
   {
-    text: "Which famous scientist developed the theory of evolution?",
-    options: ["Charles Darwin", "Isaac Newton", "Albert Einstein", "Marie Curie"],
-    correctIndex: 0
+    text: "What is the output of the following Python code?\n\nx = [1, 2, 3]\nprint(x[-1])",
+    options: ["1", "2", "3", "Error"],
+    correctIndex: 2
   },
   {
-    text: "What is the largest country in the world by land area?",
-    options: ["Russia", "Canada", "China", "United States"],
-    correctIndex: 0
+    text: "How do you remove an element from a list in Python?",
+    options: ["list.remove(element)", "list.pop()", "list.delete(element)", "list.clear()"],
+    correctIndex: 1
   }
 ];
 
